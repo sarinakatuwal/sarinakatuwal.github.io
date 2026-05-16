@@ -1,365 +1,1089 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    body {background-color: #f6f3ec}
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.8px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p3 {margin: 0.0px 0.0px 0.0px 36.0px; text-indent: -36.0px; font: 9.8px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.7); -webkit-text-stroke: rgba(255, 255, 255, 0.7)}
-    p.p6 {margin: 0.0px 0.0px 30.0px 0.0px; font: 13.2px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.65); -webkit-text-stroke: rgba(255, 255, 255, 0.65)}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.4px 'Helvetica Neue'; color: #1998ae; -webkit-text-stroke: #1998ae; background-color: #116979; background-color: rgba(17, 105, 121, 0.25)}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.4px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.75); -webkit-text-stroke: rgba(255, 255, 255, 0.75); background-color: #ffffff; background-color: rgba(255, 255, 255, 0.078)}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.2px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.6px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.3); -webkit-text-stroke: rgba(255, 255, 255, 0.3); min-height: 10.0px}
-    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.6px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.3); -webkit-text-stroke: rgba(255, 255, 255, 0.3); background-color: #0d1628}
-    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 21.6px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.2px 'Helvetica Neue'; color: #1998ae; -webkit-text-stroke: #1998ae}
-    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.8px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.9); -webkit-text-stroke: rgba(255, 255, 255, 0.9)}
-    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.8px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.65); -webkit-text-stroke: rgba(255, 255, 255, 0.65)}
-    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.8px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.65); -webkit-text-stroke: rgba(255, 255, 255, 0.65); background-color: #0d1628}
-    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.4px 'Helvetica Neue'; color: #116979; -webkit-text-stroke: #116979}
-    p.p20 {margin: 0.0px 0.0px 12.0px 0.0px; font: 11.5px 'Helvetica Neue'; color: #485165; -webkit-text-stroke: #485165}
-    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.5px 'Helvetica Neue'; color: #485165; -webkit-text-stroke: #485165}
-    p.p22 {margin: 0.0px 0.0px 36.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #485165; -webkit-text-stroke: #485165}
-    p.p23 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px '.Apple Color Emoji UI'; color: #1998ae; -webkit-text-stroke: #1998ae; background-color: #0d1628}
-    p.p24 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.8px 'Helvetica Neue'; color: #0d1628; -webkit-text-stroke: #0d1628}
-    p.p25 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.6px 'Helvetica Neue'; color: #116979; -webkit-text-stroke: #116979; background-color: #d9f3f6}
-    p.p26 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.2px 'Helvetica Neue'; color: #116979; -webkit-text-stroke: #116979}
-    p.p27 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.4px 'Helvetica Neue'; color: #485165; -webkit-text-stroke: #485165}
-    p.p28 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.6px 'Helvetica Neue'; color: #485165; -webkit-text-stroke: #485165}
-    p.p29 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.4px 'Helvetica Neue'; color: #1998ae; -webkit-text-stroke: #1998ae}
-    p.p31 {margin: 0.0px 0.0px 36.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.55); -webkit-text-stroke: rgba(255, 255, 255, 0.55)}
-    p.p32 {margin: 0.0px 0.0px 0.0px 0.0px; font: 30.0px '.Apple Color Emoji UI'; color: #ffffff; color: rgba(255, 255, 255, 0.2); -webkit-text-stroke: rgba(255, 255, 255, 0.2)}
-    p.p33 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.6px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.2); -webkit-text-stroke: rgba(255, 255, 255, 0.2)}
-    p.p34 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #116979; background-color: rgba(17, 105, 121, 0.8)}
-    p.p35 {margin: 0.0px 0.0px 0.0px 0.0px; font: 7.8px 'Helvetica Neue'; color: #1998ae; -webkit-text-stroke: #1998ae}
-    p.p36 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.6px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p37 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.55); -webkit-text-stroke: rgba(255, 255, 255, 0.55)}
-    p.p38 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.2px 'Helvetica Neue'; color: #1998ae; -webkit-text-stroke: #1998ae; background-color: #116979; background-color: rgba(17, 105, 121, 0.2)}
-    p.p39 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 9.8px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.4); -webkit-text-stroke: rgba(255, 255, 255, 0.4)}
-    p.p40 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px '.Apple Color Emoji UI'; color: #141322; -webkit-text-stroke: #141322}
-    p.p41 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.4px 'Helvetica Neue'; color: #0d1628; -webkit-text-stroke: #0d1628}
-    p.p42 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.6px 'Helvetica Neue'; color: #485165; -webkit-text-stroke: #485165; background-color: #ffffff}
-    p.p43 {margin: 0.0px 0.0px 0.0px 0.0px; font: 36.0px 'Helvetica Neue'; color: #d9f3f6; -webkit-text-stroke: #d9f3f6}
-    p.p45 {margin: 0.0px 0.0px 9.6px 0.0px; font: 10.6px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.7); -webkit-text-stroke: rgba(255, 255, 255, 0.7)}
-    p.p46 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.6px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.7); -webkit-text-stroke: rgba(255, 255, 255, 0.7)}
-    p.p47 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.2px '.Apple Color Emoji UI'; color: #141322; -webkit-text-stroke: #141322}
-    p.p48 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.2px 'Helvetica Neue'; color: #0d1628; -webkit-text-stroke: #0d1628}
-    p.p49 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px 'Helvetica Neue'; color: #485165; -webkit-text-stroke: #485165}
-    p.p51 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.6px 'Helvetica Neue'; color: #0d1628; -webkit-text-stroke: #0d1628}
-    p.p52 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.4px 'Helvetica Neue'; color: #485165; -webkit-text-stroke: #485165}
-    p.p53 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.6px 'Helvetica Neue'; color: #0d1628; -webkit-text-stroke: #0d1628}
-    p.p54 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.6px 'Helvetica Neue'; color: #485165; -webkit-text-stroke: #485165}
-    p.p55 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.6px 'Helvetica Neue'; color: #485165; -webkit-text-stroke: #485165; min-height: 11.0px}
-    p.p56 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px '.Apple Color Emoji UI'; color: #ffffff; color: rgba(255, 255, 255, 0.7); -webkit-text-stroke: rgba(255, 255, 255, 0.7)}
-    p.p57 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.4px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.4); -webkit-text-stroke: rgba(255, 255, 255, 0.4)}
-    p.p58 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.8px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p59 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.8px 'Helvetica Neue'; color: #1998ae; -webkit-text-stroke: #1998ae}
-    p.p60 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.4px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p61 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.6px 'Helvetica Neue'; color: #1998ae; -webkit-text-stroke: #1998ae}
-    p.p62 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.6px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.5); -webkit-text-stroke: rgba(255, 255, 255, 0.5)}
-    p.p63 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.4px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p64 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.2px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.6); -webkit-text-stroke: rgba(255, 255, 255, 0.6)}
-    p.p65 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.2px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.8); -webkit-text-stroke: rgba(255, 255, 255, 0.8)}
-    p.p66 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 9.0px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.3); -webkit-text-stroke: rgba(255, 255, 255, 0.3); background-color: #0a101c}
-    li.li2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.8px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.7); -webkit-text-stroke: rgba(255, 255, 255, 0.7)}
-    li.li4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 56.0px 'Helvetica Neue'; color: #ffffff; min-height: 66.0px}
-    li.li28 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.6px 'Helvetica Neue'; color: #485165; -webkit-text-stroke: #485165}
-    span.s1 {font-kerning: none; background-color: rgba(13, 22, 40, 0.96)}
-    span.s2 {background-color: rgba(13, 22, 40, 0.96); -webkit-text-stroke: 0px #000000}
-    span.s3 {font-kerning: none; background-color: #0d1628}
-    span.s4 {font-kerning: none}
-    span.s5 {font-kerning: none; color: #1998ae; background-color: #0d1628; -webkit-text-stroke: 0px #1998ae}
-    span.s6 {font-kerning: none; background-color: #116979}
-    span.s7 {font: 12.0px 'Helvetica Neue'; font-kerning: none; color: #141322; background-color: #0d1628; -webkit-text-stroke: 0px #141322}
-    span.s8 {font-kerning: none; background-color: #ffffff}
-    span.s9 {font-kerning: none; color: #116979; background-color: #ffffff; -webkit-text-stroke: 0px #116979}
-    span.s10 {font-kerning: none; color: #0d1628; background-color: #ffffff; -webkit-text-stroke: 0px #0d1628}
-    span.s11 {font-kerning: none; background-color: #f6f3ec}
-    span.s12 {font-kerning: none; color: #116979; background-color: #f6f3ec; -webkit-text-stroke: 0px #116979}
-    span.s13 {color: #0d1628; background-color: #ffffff; -webkit-text-stroke: 0px #000000}
-    span.s14 {background-color: #ffffff; -webkit-text-stroke: 0px #000000}
-    span.s15 {font-kerning: none; color: #116979; background-color: #0d1628; -webkit-text-stroke: 0px #116979}
-    span.s16 {font-kerning: none; background-color: rgba(255, 255, 255, 0.051)}
-    span.s17 {font: 9.8px '.Apple Color Emoji UI'; font-kerning: none; background-color: #0d1628}
-    span.s18 {font-kerning: none; background-color: #efe9e0}
-    span.s19 {font-kerning: none; color: #116979; background-color: #efe9e0; -webkit-text-stroke: 0px #116979}
-    span.s20 {font-kerning: none; color: #ffffff; background-color: #0d1628; -webkit-text-stroke: 0px #ffffff}
-    span.s21 {font-kerning: none; background-color: #d9f3f6}
-    span.s22 {font-kerning: none; background-color: #e3ecfe}
-    span.s23 {font-kerning: none; background-color: #fff0d9}
-    span.s24 {font-kerning: none; background-color: rgba(17, 105, 121, 0.2)}
-    span.s25 {font: 10.8px 'Helvetica Neue'; font-kerning: none; color: #1998ae; -webkit-text-stroke: 0px #1998ae}
-    span.s26 {font-kerning: none; background-color: rgba(255, 255, 255, 0.059)}
-    span.s27 {font-kerning: none; background-color: rgba(17, 105, 121, 0.15)}
-    ul.ul1 {list-style-type: none}
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sarina Katuwal — Cybersecurity & QA Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --navy: #0f1e35;
+  --navy2: #162840;
+  --teal: #0a7c8c;
+  --teal-light: #12a8bc;
+  --teal-pale: #e0f5f8;
+  --cream: #f8f5f0;
+  --warm: #f2ede6;
+  --text: #1a1a2e;
+  --muted: #5a6478;
+  --border: #dde3ec;
+  --white: #ffffff;
+  --accent: #c8873a;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(15,30,53,0.96);
+  backdrop-filter: blur(12px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2.5rem;
+  height: 60px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.nav-logo {
+  font-family: 'DM Serif Display', serif;
+  color: #fff;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
+}
+.nav-logo span { color: var(--teal-light); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--teal-light); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  background: var(--navy);
+  display: flex; align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 2.5rem 4rem;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 50%, rgba(10,124,140,0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 10% 80%, rgba(10,124,140,0.10) 0%, transparent 60%);
+}
+.hero-grid {
+  position: absolute; inset: 0; opacity: 0.04;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-inner {
+  position: relative; z-index: 1;
+  max-width: 900px; margin: 0 auto; width: 100%;
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(10,124,140,0.2);
+  border: 1px solid rgba(10,124,140,0.4);
+  color: var(--teal-light);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 2rem;
+  letter-spacing: 0.08em;
+  animation: fadeUp 0.6s ease both;
+}
+.hero-tag::before { content: '◉'; font-size: 0.55rem; }
+h1.hero-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  color: #fff;
+  line-height: 1.05;
+  margin-bottom: 1.2rem;
+  animation: fadeUp 0.6s 0.1s ease both;
+}
+h1.hero-name em {
+  font-style: italic;
+  color: var(--teal-light);
+}
+.hero-sub {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.65);
+  max-width: 560px;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  animation: fadeUp 0.6s 0.2s ease both;
+}
+.hero-pills {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  margin-bottom: 2.8rem;
+  animation: fadeUp 0.6s 0.3s ease both;
+}
+.pill {
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+.pill-teal { background: rgba(10,124,140,0.25); color: var(--teal-light); border: 1px solid rgba(10,124,140,0.4); }
+.pill-white { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.75); border: 1px solid rgba(255,255,255,0.15); }
+.hero-cta {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+  animation: fadeUp 0.6s 0.4s ease both;
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 26px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary { background: var(--teal); color: #fff; }
+.btn-primary:hover { background: var(--teal-light); transform: translateY(-1px); }
+.btn-outline { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3); }
+.btn-outline:hover { border-color: var(--teal-light); color: var(--teal-light); }
+.hero-scroll {
+  position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+  color: rgba(255,255,255,0.3);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  animation: fadeUp 0.6s 0.6s ease both;
+}
+.scroll-line {
+  width: 1px; height: 40px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+/* ── SECTIONS ── */
+section { padding: 5rem 2.5rem; }
+.container { max-width: 960px; margin: 0 auto; }
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 0.6rem;
+}
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  color: var(--navy);
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+.section-title em { font-style: italic; color: var(--teal); }
+.section-intro {
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 620px;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+/* ── ABOUT ── */
+#about { background: var(--white); }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 4rem;
+  align-items: start;
+}
+.about-card {
+  background: var(--navy);
+  border-radius: 16px;
+  padding: 2.5rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.about-card::after {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 140px; height: 140px;
+  border-radius: 50%;
+  background: rgba(10,124,140,0.2);
+}
+.about-avatar {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--teal), var(--teal-light));
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 1.2rem;
+}
+.about-name { font-family: 'DM Serif Display', serif; font-size: 1.5rem; margin-bottom: 0.3rem; }
+.about-role { color: var(--teal-light); font-size: 0.85rem; margin-bottom: 1.5rem; font-weight: 500; }
+.about-detail { font-size: 0.82rem; color: rgba(255,255,255,0.65); margin-bottom: 0.5rem; display: flex; gap: 8px; align-items: flex-start; }
+.about-detail strong { color: rgba(255,255,255,0.9); min-width: 70px; }
+.about-text p { margin-bottom: 1rem; color: var(--muted); font-size: 0.96rem; }
+.about-text p:last-child { margin-bottom: 0; }
+.about-text strong { color: var(--navy); }
+
+/* ── EXPERIENCE ── */
+#experience { background: var(--cream); }
+.exp-timeline { position: relative; }
+.exp-timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px; top: 8px; bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--teal), var(--teal-pale));
+}
+.exp-item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.exp-dot {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--navy);
+  border: 3px solid var(--teal);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  color: var(--teal-light);
+  flex-shrink: 0;
+  position: relative; z-index: 1;
+}
+.exp-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.8rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.exp-card:hover { box-shadow: 0 8px 32px rgba(10,124,140,0.1); transform: translateY(-2px); }
+.exp-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.3rem; }
+.exp-title { font-family: 'DM Serif Display', serif; font-size: 1.15rem; color: var(--navy); }
+.exp-dates {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--teal);
+  background: var(--teal-pale);
+  padding: 3px 10px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.exp-org { font-size: 0.85rem; color: var(--teal); font-weight: 600; margin-bottom: 1rem; }
+.exp-subhead { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); margin: 1rem 0 0.5rem; }
+.exp-list { list-style: none; padding: 0; }
+.exp-list li {
+  font-size: 0.88rem;
+  color: var(--muted);
+  padding: 0.3rem 0 0.3rem 1.2rem;
+  position: relative;
+  line-height: 1.55;
+}
+.exp-list li::before {
+  content: '→';
+  position: absolute; left: 0;
+  color: var(--teal);
+  font-size: 0.75rem;
+}
+.exp-list li strong { color: var(--navy); font-weight: 600; }
+
+/* ── PROJECTS ── */
+#projects { background: var(--navy); }
+#projects .section-title { color: #fff; }
+#projects .section-label { color: var(--teal-light); }
+#projects .section-intro { color: rgba(255,255,255,0.55); }
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.proj-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.25s;
+}
+.proj-card:hover {
+  background: rgba(10,124,140,0.15);
+  border-color: rgba(10,124,140,0.5);
+  transform: translateY(-4px);
+}
+.proj-img {
+  width: 100%; height: 180px;
+  background: linear-gradient(135deg, #162840 0%, #0a3a4a 100%);
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.proj-img-placeholder {
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  color: rgba(255,255,255,0.2);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.proj-img-icon { font-size: 2.5rem; opacity: 0.3; }
+.proj-img-label { font-family: 'JetBrains Mono', monospace; }
+.proj-add-btn {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(10,124,140,0.0);
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.proj-card:hover .proj-add-btn { background: rgba(10,124,140,0.15); }
+.proj-add-inner {
+  background: rgba(10,124,140,0.8);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  letter-spacing: 0.05em;
+}
+.proj-card:hover .proj-add-inner { opacity: 1; }
+.proj-body { padding: 1.4rem; }
+.proj-tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--teal-light);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.proj-name { font-family: 'DM Serif Display', serif; font-size: 1.05rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.2; }
+.proj-desc { font-size: 0.83rem; color: rgba(255,255,255,0.55); line-height: 1.55; margin-bottom: 1rem; }
+.proj-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.proj-pill {
+  font-size: 0.68rem;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: rgba(10,124,140,0.2);
+  color: var(--teal-light);
+  border: 1px solid rgba(10,124,140,0.35);
+  font-weight: 500;
+}
+.upload-note {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1.2rem;
+  border: 1px dashed rgba(255,255,255,0.15);
+  border-radius: 10px;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.82rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── SKILLS ── */
+#skills { background: var(--white); }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+.skill-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.skill-card-icon { font-size: 1.5rem; margin-bottom: 0.8rem; }
+.skill-card-title { font-weight: 600; color: var(--navy); font-size: 0.95rem; margin-bottom: 0.8rem; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.skill-tag {
+  font-size: 0.72rem;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: var(--white);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  font-weight: 500;
+}
+.skill-tag.highlight {
+  background: var(--teal-pale);
+  color: var(--teal);
+  border-color: rgba(10,124,140,0.3);
+}
+
+/* ── REFLECTION ── */
+#reflection { background: var(--warm); }
+.reflection-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2.5rem; }
+.reflect-card {
+  background: var(--white);
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  padding: 2rem;
+}
+.reflect-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 3rem;
+  color: var(--teal-pale);
+  line-height: 1;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid var(--teal-pale);
+  padding-bottom: 0.6rem;
+}
+.reflect-title { font-weight: 600; color: var(--navy); font-size: 0.95rem; margin-bottom: 0.6rem; }
+.reflect-body { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+.career-theory-box {
+  background: var(--navy);
+  border-radius: 14px;
+  padding: 2.2rem;
+  color: #fff;
+}
+.career-theory-box h3 { font-family: 'DM Serif Display', serif; font-size: 1.3rem; margin-bottom: 1rem; color: var(--teal-light); }
+.career-theory-box p { font-size: 0.88rem; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 0.8rem; }
+.career-theory-box p:last-child { margin-bottom: 0; }
+.career-theory-box strong { color: #fff; }
+
+/* ── CERTS ── */
+#certs { background: var(--cream); }
+.certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
+.cert-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+  display: flex; gap: 1rem; align-items: flex-start;
+  transition: box-shadow 0.2s;
+}
+.cert-card:hover { box-shadow: 0 4px 20px rgba(10,124,140,0.12); }
+.cert-icon {
+  width: 40px; height: 40px; flex-shrink: 0;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+}
+.cert-icon.blue { background: #e8f0fe; }
+.cert-icon.teal { background: var(--teal-pale); }
+.cert-icon.amber { background: #fff3e0; }
+.cert-name { font-weight: 600; font-size: 0.85rem; color: var(--navy); margin-bottom: 0.2rem; line-height: 1.3; }
+.cert-body { font-size: 0.75rem; color: var(--muted); }
+
+/* ── EDUCATION ── */
+#education { background: var(--white); }
+.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.edu-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.edu-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0;
+  width: 4px; height: 100%;
+  background: var(--teal);
+}
+.edu-degree { font-family: 'DM Serif Display', serif; font-size: 1.05rem; color: var(--navy); margin-bottom: 0.3rem; line-height: 1.25; }
+.edu-uni { font-size: 0.85rem; color: var(--teal); font-weight: 600; margin-bottom: 0.4rem; }
+.edu-dates { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--muted); margin-bottom: 0.8rem; }
+.edu-courses { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+.edu-courses strong { color: var(--navy); display: block; margin-bottom: 0.3rem; }
+
+/* ── CONTACT ── */
+#contact { background: var(--navy); padding: 4rem 2.5rem; }
+#contact .section-title { color: #fff; }
+#contact .section-label { color: var(--teal-light); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.contact-info { color: rgba(255,255,255,0.7); }
+.contact-item { display: flex; gap: 1rem; align-items: center; margin-bottom: 1.2rem; }
+.contact-item-icon {
+  width: 42px; height: 42px;
+  border-radius: 10px;
+  background: rgba(10,124,140,0.2);
+  border: 1px solid rgba(10,124,140,0.35);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.contact-item-label { font-size: 0.7rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px; }
+.contact-item-val { font-size: 0.9rem; color: #fff; }
+.contact-item-val a { color: var(--teal-light); text-decoration: none; }
+.ref-cards { display: flex; flex-direction: column; gap: 1rem; }
+.ref-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 1.3rem 1.5rem;
+}
+.ref-name { font-weight: 600; color: #fff; font-size: 0.95rem; margin-bottom: 0.2rem; }
+.ref-role { color: var(--teal-light); font-size: 0.8rem; margin-bottom: 0.15rem; }
+.ref-email { color: rgba(255,255,255,0.5); font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; }
+
+/* ── FOOTER ── */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #0a1525;
+  color: rgba(255,255,255,0.3);
+  font-size: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible { opacity: 1; transform: none; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 700px) {
+  nav { padding: 0 1.2rem; }
+  .nav-links { gap: 1rem; }
+  .nav-links a { font-size: 0.72rem; }
+  section { padding: 3.5rem 1.2rem; }
+  .about-grid, .reflection-grid, .contact-grid, .edu-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .hero { padding: 5rem 1.2rem 3rem; }
+}
+</style>
 </head>
 <body>
-<p class="p1"><span class="s1">Portfolio</span></p>
-<ul class="ul1">
-  <li class="li2"><span class="s2"></span><span class="s1">ABOUT</span></li>
-  <li class="li2"><span class="s2"></span><span class="s1">EXPERIENCE</span></li>
-  <li class="li2"><span class="s2"></span><span class="s1">PROJECTS</span></li>
-  <li class="li2"><span class="s2"></span><span class="s1">REFLECTION</span></li>
-</ul>
-<p class="p3"><span class="s1">CERTIFICATION</span></p>
-<ul class="ul1">
-  <li class="li2"><span class="s2"></span><span class="s1">CONTACT</span></li>
-  <li class="li4"></li>
-</ul>
-<h1 style="margin: 0.0px 0.0px 14.4px 0.0px; font: 56.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff"><span class="s3">Sarina</span><span class="s4"><br>
-</span><span class="s5">Katuwal</span></h1>
-<p class="p6"><span class="s3">Cybersecurity Analyst (GRC) &amp; Quality Assurance Engineer transitioning into a cybersecurity career with 5+ years of fintech QA experience and hands-on GRC internship exposure.</span></p>
-<p class="p7"><span class="s4">Essential 8 · ACSC</span></p>
-<p class="p7"><span class="s4">OpenFAIR Risk</span></p>
-<p class="p7"><span class="s4">ISO 27001 · NIST · SOC 2</span></p>
-<p class="p7"><span class="s4">Quality Assurance</span></p>
-<p class="p8"><span class="s4">OWASP Top 10</span></p>
-<p class="p8"><span class="s4">Burp Suite · VAPT</span></p>
-<p class="p8"><span class="s4">Agile / Scrum</span></p>
-<p class="p9"><span class="s6">View Experience</span><span class="s7"> </span><span class="s3">Get in Touch</span></p>
-<p class="p10"><span class="s4"></span><br></p>
-<p class="p11"><span class="s4">SCROLL</span></p>
-<p class="p12"><span class="s3">SK</span></p>
-<p class="p13"><span class="s3">Sarina Katuwal</span></p>
-<p class="p14"><span class="s3">Cybersecurity &amp; QA Professional</span></p>
-<p class="p15"><span class="s3">Location</span></p>
-<p class="p16"><span class="s3">Sunshine Coast, QLD</span></p>
-<p class="p15"><span class="s3">Study</span></p>
-<p class="p16"><span class="s3">M.ICT — Univ. of Sunshine Coast</span></p>
-<p class="p15"><span class="s3">Available</span></p>
-<p class="p16"><span class="s3">Graduate roles from late 2026</span></p>
-<p class="p15"><span class="s3">Email</span></p>
-<p class="p17"><span class="s4">skatwalg96@gmail.com</span></p>
-<p class="p18"><span class="s8">ABOUT ME</span></p>
-<h2 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 32.0px 'Helvetica Neue'; color: #0d1628; -webkit-text-stroke: #0d1628"><span class="s8">Where </span><span class="s9">security</span><span class="s8"> meets quality</span></h2>
-<p class="p20"><span class="s8">I started my career as a QA engineer at F1Soft International — one of Nepal's largest fintech companies — where I spent five years building expertise in testing complex financial systems. Over time, my work in API security testing, vulnerability assessment, and compliance documentation drew me deeper into cybersecurity.</span></p>
-<p class="p20"><span class="s8">In 2024 I moved to Australia to pursue a </span><span class="s10">Master of ICT at the University of the Sunshine Coast</span><span class="s8">, focusing on cybersecurity. In 2026 I completed an internship at Actualisation as a </span><span class="s10">GRC analyst</span><span class="s8">, conducting an Essential 8 gap analysis and applying the OpenFAIR risk framework to deliver executive-level cyber risk reports to the CISO.</span></p>
-<p class="p21"><span class="s8">I am now seeking graduate or entry-level cybersecurity roles — particularly in </span><span class="s10">GRC, security testing, or risk analysis</span><span class="s8"> — where I can apply my combined technical and compliance background.</span></p>
-<p class="p18"><span class="s11">PROFESSIONAL EXPERIENCE</span></p>
-<h2 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 32.0px 'Helvetica Neue'; color: #0d1628; -webkit-text-stroke: #0d1628"><span class="s11">Where I've </span><span class="s12">worked</span></h2>
-<p class="p22"><span class="s11">Five years in fintech QA, now building a cybersecurity career through formal study and hands-on GRC internship experience.</span></p>
-<p class="p23"><span class="s4">🔐</span></p>
-<p class="p24"><span class="s8">Cybersecurity Analyst Intern — GRC</span></p>
-<p class="p25"><span class="s4">Mar 2026 – May 2026</span></p>
-<p class="p26"><span class="s8">Actualisation · Sunshine Coast, QLD</span></p>
-<p class="p27"><span class="s8">GRC &amp; RISK MANAGEMENT</span></p>
-<ul class="ul1">
-  <li class="li28"><span class="s13"></span><span class="s10">Delivered full Essential 8 gap analysis</span><span class="s8"> against ACSC Maturity Level 2 — mapping deficiencies across all 8 mitigation strategies and producing a prioritised remediation roadmap for the CISO.</span></li>
-  <li class="li28"><span class="s13"></span><span class="s10">Applied OpenFAIR risk quantification</span><span class="s8"> to model top cyber risk scenarios, estimating loss event frequency (LEF) and probable loss magnitude (PLM) for executive-level risk discussions.</span></li>
-  <li class="li28"><span class="s13"></span><span class="s10">Cross-mapped four GRC frameworks</span><span class="s8"> (ISO 27001, NIST CSF, SOC 2, Essential 8) to the organisation's current posture, supporting strategic security investment decisions.</span></li>
-  <li class="li28"><span class="s14"></span><span class="s8">Contributed to risk register maintenance and CISO-level risk reporting.</span></li>
-</ul>
-<p class="p27"><span class="s8">SECURITY TESTING</span></p>
-<ul class="ul1">
-  <li class="li28"><span class="s14"></span><span class="s8">Conducted web application security testing against OWASP Top 10 vulnerabilities with documented findings and remediation guidance.</span></li>
-  <li class="li28"><span class="s14"></span><span class="s8">Authored VAPT documentation and test evidence for compliance and audit-readiness.</span></li>
-</ul>
-<p class="p23"><span class="s4">🧪</span></p>
-<p class="p24"><span class="s8">QA Engineer → Senior QA Engineer</span></p>
-<p class="p25"><span class="s4">Apr 2019 – Jul 2024</span></p>
-<p class="p26"><span class="s8">F1Soft International Pvt. Ltd. (FinTech) · Nepal</span></p>
-<p class="p27"><span class="s8">SECURITY CONTRIBUTIONS</span></p>
-<ul class="ul1">
-  <li class="li28"><span class="s13"></span><span class="s10">Reduced vulnerability exposure</span><span class="s8"> across financial APIs through structured Burp Suite and Postman security testing, identifying and escalating critical data-handling vulnerabilities.</span></li>
-  <li class="li28"><span class="s13"></span><span class="s10">Strengthened audit readiness</span><span class="s8"> by authoring VAPT reports and compliance-aligned documentation across multiple production systems.</span></li>
-  <li class="li28"><span class="s14"></span><span class="s8">Performed SQL backend validation for access controls and data integrity across multi-tenant banking environments.</span></li>
-</ul>
-<p class="p27"><span class="s8">QA ENGINEERING</span></p>
-<ul class="ul1">
-  <li class="li28"><span class="s13"></span><span class="s10">Promoted to Senior QA Engineer within 3 years</span><span class="s8"> based on delivery quality, technical leadership, and team capability uplift.</span></li>
-  <li class="li28"><span class="s14"></span><span class="s8">Led end-to-end testing of two major financial platforms serving thousands of customers — functional, regression, integration, smoke, UAT and exploratory phases.</span></li>
-  <li class="li28"><span class="s14"></span><span class="s8">Mentored junior QA engineers; contributed to hiring and onboarding of 5+ team members.</span></li>
-  <li class="li28"><span class="s14"></span><span class="s8">Maintained requirements traceability matrices; contributed to sprint planning and release cycles in Agile/Scrum teams.</span></li>
-</ul>
-<p class="p29"><span class="s3">KEY PROJECTS</span></p>
-<h2 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 32.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff"><span class="s3">Work that </span><span class="s15">demonstrates</span><span class="s3"> my skills</span></h2>
-<p class="p31"><span class="s3">Real deliverables from my internship and QA career. Replace placeholders with your screenshots when ready.</span></p>
-<p class="p32"><span class="s16">📊</span></p>
-<p class="p33"><span class="s16">ADD SCREENSHOT HERE</span></p>
-<p class="p34"><span class="s4">+ Add Screenshot</span></p>
-<p class="p35"><span class="s16">GRC · ACTUALISATION INTERNSHIP</span></p>
-<p class="p36"><span class="s16">Essential 8 Gap Analysis — Maturity Level 2</span></p>
-<p class="p37"><span class="s16">Benchmarked Actualisation's security controls against all 8 ACSC mitigation strategies. Identified 12+ control gaps and produced a scored gap report and remediation roadmap for the CISO.</span></p>
-<p class="p38"><span class="s4">Essential 8</span></p>
-<p class="p38"><span class="s4">ACSC</span></p>
-<p class="p38"><span class="s4">Gap Analysis</span></p>
-<p class="p38"><span class="s4">Risk Reporting</span></p>
-<p class="p32"><span class="s16">⚖️</span></p>
-<p class="p33"><span class="s16">ADD SCREENSHOT HERE</span></p>
-<p class="p34"><span class="s4">+ Add Screenshot</span></p>
-<p class="p35"><span class="s16">RISK QUANTIFICATION · ACTUALISATION INTERNSHIP</span></p>
-<p class="p36"><span class="s16">OpenFAIR Risk Scenario Modelling</span></p>
-<p class="p37"><span class="s16">Developed 3 OpenFAIR risk scenarios estimating loss event frequency and probable loss magnitude for the organisation's top cyber threats. Findings directly informed board-level risk appetite discussions.</span></p>
-<p class="p38"><span class="s4">OpenFAIR</span></p>
-<p class="p38"><span class="s4">ISO 27001</span></p>
-<p class="p38"><span class="s4">NIST CSF</span></p>
-<p class="p38"><span class="s4">CISO Reporting</span></p>
-<p class="p32"><span class="s16">📱</span></p>
-<p class="p33"><span class="s16">ADD SCREENSHOT HERE</span></p>
-<p class="p34"><span class="s4">+ Add Screenshot</span></p>
-<p class="p35"><span class="s16">SECURITY &amp; QA · F1SOFT</span></p>
-<p class="p36"><span class="s16">Mobile Banking App — Security &amp; Functional Testing</span></p>
-<p class="p37"><span class="s16">Led end-to-end testing of a mobile banking platform covering MFA flows, monetary transfers, API validation and SQL data integrity — serving thousands of customers across Nepal.</span></p>
-<p class="p38"><span class="s4">OWASP Top 10</span></p>
-<p class="p38"><span class="s4">Burp Suite</span></p>
-<p class="p38"><span class="s4">Postman</span></p>
-<p class="p38"><span class="s4">SQL</span></p>
-<p class="p32"><span class="s16">🎁</span></p>
-<p class="p33"><span class="s16">ADD SCREENSHOT HERE</span></p>
-<p class="p34"><span class="s4">+ Add Screenshot</span></p>
-<p class="p35"><span class="s16">QA · F1SOFT</span></p>
-<p class="p36"><span class="s16">Loyalty Rewards &amp; Points Management Platform</span></p>
-<p class="p37"><span class="s16">Tested points accrual, redemption and rewards catalogue workflows. Conducted integration testing between payment systems and rewards modules, supporting UAT for real-world customer scenarios.</span></p>
-<p class="p38"><span class="s4">Integration Testing</span></p>
-<p class="p38"><span class="s4">UAT</span></p>
-<p class="p38"><span class="s4">Regression</span></p>
-<p class="p38"><span class="s4">Jira / Xray</span></p>
-<p class="p39"><span class="s17">💡</span><span class="s3"> Replace placeholder images with your own screenshots, test reports, or evidence documents from each project</span></p>
-<p class="p18"><span class="s8">TECHNICAL SKILLS</span></p>
-<h2 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 32.0px 'Helvetica Neue'; color: #0d1628; -webkit-text-stroke: #0d1628"><span class="s8">What I </span><span class="s9">bring</span></h2>
-<p class="p22"><span class="s8">A rare combination of security testing, GRC compliance experience, and deep QA engineering expertise.</span></p>
-<p class="p40"><span class="s11">🛡️</span></p>
-<p class="p41"><span class="s11">Cybersecurity &amp; GRC</span></p>
-<p class="p25"><span class="s4">Essential 8 (ACSC)</span></p>
-<p class="p25"><span class="s4">OpenFAIR</span></p>
-<p class="p25"><span class="s4">ISO 27001</span></p>
-<p class="p25"><span class="s4">NIST CSF</span></p>
-<p class="p25"><span class="s4">SOC 2</span></p>
-<p class="p42"><span class="s4">VAPT</span></p>
-<p class="p42"><span class="s4">Risk Register</span></p>
-<p class="p42"><span class="s4">OWASP Top 10</span></p>
-<p class="p40"><span class="s11">🔍</span></p>
-<p class="p41"><span class="s11">Security Testing</span></p>
-<p class="p25"><span class="s4">Burp Suite</span></p>
-<p class="p25"><span class="s4">Postman</span></p>
-<p class="p42"><span class="s4">API Security Testing</span></p>
-<p class="p42"><span class="s4">Web App Security</span></p>
-<p class="p42"><span class="s4">Vulnerability Assessment</span></p>
-<p class="p42"><span class="s4">Penetration Testing</span></p>
-<p class="p40"><span class="s11">✅</span></p>
-<p class="p41"><span class="s11">QA &amp; Testing</span></p>
-<p class="p42"><span class="s4">Functional Testing</span></p>
-<p class="p42"><span class="s4">Regression Testing</span></p>
-<p class="p42"><span class="s4">Integration Testing</span></p>
-<p class="p42"><span class="s4">UAT</span></p>
-<p class="p42"><span class="s4">Exploratory Testing</span></p>
-<p class="p25"><span class="s4">JMeter</span></p>
-<p class="p42"><span class="s4">Smoke Testing</span></p>
-<p class="p40"><span class="s11">🧰</span></p>
-<p class="p41"><span class="s11">Tools &amp; Platforms</span></p>
-<p class="p25"><span class="s4">Jira &amp; Xray</span></p>
-<p class="p42"><span class="s4">Confluence</span></p>
-<p class="p42"><span class="s4">Katalon Studio</span></p>
-<p class="p42"><span class="s4">Selenium WebDriver</span></p>
-<p class="p42"><span class="s4">Git</span></p>
-<p class="p42"><span class="s4">SQL</span></p>
-<p class="p40"><span class="s11">⚙️</span></p>
-<p class="p41"><span class="s11">Methodologies</span></p>
-<p class="p25"><span class="s4">Agile / Scrum</span></p>
-<p class="p42"><span class="s4">SDLC / STLC</span></p>
-<p class="p42"><span class="s4">Risk-Based Testing</span></p>
-<p class="p42"><span class="s4">Compliance Testing</span></p>
-<p class="p42"><span class="s4">Sprint Planning</span></p>
-<p class="p42"><span class="s4">Traceability Matrices</span></p>
-<p class="p40"><span class="s11">📝</span></p>
-<p class="p41"><span class="s11">Documentation</span></p>
-<p class="p42"><span class="s4">Test Plans</span></p>
-<p class="p42"><span class="s4">VAPT Reports</span></p>
-<p class="p42"><span class="s4">Risk Registers</span></p>
-<p class="p42"><span class="s4">Gap Analysis Reports</span></p>
-<p class="p42"><span class="s4">Audit Documentation</span></p>
-<p class="p18"><span class="s18">REFLECTION ON LEARNING</span></p>
-<h2 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 32.0px 'Helvetica Neue'; color: #0d1628; -webkit-text-stroke: #0d1628"><span class="s18">How I've </span><span class="s19">grown</span></h2>
-<p class="p22"><span class="s18">Reflecting on my career journey through the lens of career development theory — from fintech QA to cybersecurity GRC professional.</span></p>
-<p class="p43"><span class="s8">01</span></p>
-<p class="p41"><span class="s8">From QA to Security — Recognising the Connection</span></p>
-<p class="p28"><span class="s8">My five years in QA at F1Soft taught me to think adversarially — to find what breaks before users do. When I began security testing using Burp Suite and writing VAPT reports, I realised I was already thinking like a security tester. This recognition aligned with Holland's theory of career fit: my investigative and detail-oriented nature was naturally suited to cybersecurity, not just QA.</span></p>
-<p class="p43"><span class="s8">02</span></p>
-<p class="p41"><span class="s8">Learning GRC — Bridging Technical and Business</span></p>
-<p class="p28"><span class="s8">The Actualisation internship was a turning point. Applying OpenFAIR to model cyber risk and presenting to the CISO forced me to translate technical findings into business language. This reflects Super's career development theory — I moved from the exploration stage into the establishment stage, building real-world GRC competency and professional identity as a cybersecurity analyst.</span></p>
-<p class="p43"><span class="s8">03</span></p>
-<p class="p41"><span class="s8">What Surprised Me Most</span></p>
-<p class="p28"><span class="s8">I expected GRC to be mostly documentation. What surprised me was how analytical it is — quantifying risk with OpenFAIR, scoring Essential 8 maturity gaps, mapping frameworks against real controls. This experience challenged me intellectually and confirmed that GRC is where I want to build my career: at the intersection of technical security and strategic decision-making.</span></p>
-<p class="p43"><span class="s8">04</span></p>
-<p class="p41"><span class="s8">Where I'm Heading</span></p>
-<p class="p28"><span class="s8">My short-term goal is to complete my Master of ICT and secure a graduate GRC or security analyst role in Australia. Medium-term, I plan to pursue a CISSP or CISA certification and grow into a senior security risk advisory role. My career goal aligns with Krumboltz's planned happenstance theory — being open to opportunities (like this internship) while actively building skills that make me ready when they arrive.</span></p>
-<h3 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 15.6px 'Helvetica Neue'; color: #1998ae; -webkit-text-stroke: #1998ae"><span class="s3">Career Development Theory — Applied to My Journey</span></h3>
-<p class="p45"><span class="s3">My career transition from QA engineering to cybersecurity reflects key principles from established career development frameworks. </span><span class="s20">Super's Life-Span Theory</span><span class="s3"> frames my current position as the late exploration / early establishment stage — I have identified my direction (cybersecurity GRC), am gaining real-world experience through my internship, and am building the professional identity needed to transition fully into the field.</span></p>
-<p class="p45"><span class="s20">Krumboltz's Social Learning Theory</span><span class="s3"> explains how I got here: unplanned learning experiences in security testing during my QA role sparked curiosity, which led me to pursue formal cybersecurity study and seek out a GRC internship. Each step was partly planned, partly opportunistic — which is exactly how Krumboltz describes effective career development.</span></p>
-<p class="p46"><span class="s3">Going forward, I intend to apply </span><span class="s20">Bandura's self-efficacy</span><span class="s3"> principles: building confidence through progressive mastery — first the internship, then graduate roles, then certifications (CISA/CISSP) — rather than waiting until I feel "ready."</span></p>
-<p class="p18"><span class="s11">CERTIFICATIONS</span></p>
-<h2 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 32.0px 'Helvetica Neue'; color: #0d1628; -webkit-text-stroke: #0d1628"><span class="s11">Credentials &amp; </span><span class="s12">qualifications</span></h2>
-<p class="p22"><span class="s11">Industry-recognised certifications supporting my transition into cybersecurity.</span></p>
-<p class="p47"><span class="s21">🧪</span></p>
-<p class="p48"><span class="s8">ISTQB Certified Tester — Foundation Level</span></p>
-<p class="p49"><span class="s8">International Software Testing Qualifications Board</span></p>
-<p class="p47"><span class="s22">☁️</span></p>
-<p class="p48"><span class="s8">Microsoft Certified: Azure Data Fundamentals (DP-900)</span></p>
-<p class="p49"><span class="s8">Microsoft</span></p>
-<p class="p47"><span class="s22">🤖</span></p>
-<p class="p48"><span class="s8">Microsoft Certified: Azure AI Fundamentals (AI-900)</span></p>
-<p class="p49"><span class="s8">Microsoft</span></p>
-<p class="p47"><span class="s23">🐍</span></p>
-<p class="p48"><span class="s8">IT Specialist — Python</span></p>
-<p class="p49"><span class="s8">Certiport / Pearson VUE</span></p>
-<p class="p47"><span class="s21">🔒</span></p>
-<p class="p48"><span class="s8">CyberSmart: Information Security Training</span></p>
-<p class="p49"><span class="s8">Cybersecurity Awareness Program</span></p>
-<p class="p47"><span class="s22">📄</span></p>
-<p class="p48"><span class="s8">Microsoft Office Specialist: Word 2013</span></p>
-<p class="p49"><span class="s8">Microsoft</span></p>
-<p class="p18"><span class="s8">EDUCATION</span></p>
-<h2 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 32.0px 'Helvetica Neue'; color: #116979; -webkit-text-stroke: #116979"><span class="s10">Academic </span><span class="s8">foundations</span></h2>
-<p class="p51"><span class="s11">Master of Information and Communications Technology (ICT)</span></p>
-<p class="p26"><span class="s11">University of the Sunshine Coast</span></p>
-<p class="p52"><span class="s11">Jul 2024 – Present (Ongoing) · Sunshine Coast, QLD</span></p>
-<p class="p53"><span class="s11">Relevant Coursework</span></p>
-<p class="p54"><span class="s11">Cybersecurity Fundamentals · Managing Data &amp; Databases · Programming Foundations · Machine Learning · Project Management<span class="Apple-converted-space"> </span></span></p>
-<p class="p55"><span class="s4"></span><br></p>
-<p class="p53"><span class="s11">Capstone</span></p>
-<p class="p54"><span class="s11">Industry Dissertation I &amp; II (in progress)</span></p>
-<p class="p51"><span class="s11">Bachelor of Information Management (BIM)</span></p>
-<p class="p26"><span class="s11">Prime College, Tribhuvan University</span></p>
-<p class="p52"><span class="s11">2014 – 2018 · Kathmandu, Nepal · CGPA: 3.62 / 4.0</span></p>
-<p class="p53"><span class="s11">Key Subjects</span></p>
-<p class="p54"><span class="s11">Computer Information Systems · Software Engineering · Computer Security &amp; Cyber Law · Web Technology · Artificial Intelligence · Data Structures &amp; Algorithms · Digital Logic</span></p>
-<p class="p29"><span class="s3">GET IN TOUCH</span></p>
-<h2 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 32.0px 'Helvetica Neue'; color: #116979; -webkit-text-stroke: #116979"><span class="s20">Let's </span><span class="s3">connect</span></h2>
-<p class="p56"><span class="s24">📧</span></p>
-<p class="p57"><span class="s3">EMAIL</span></p>
-<p class="p58"><span class="s3">skatwalg96@gmail.com</span></p>
-<p class="p56"><span class="s24">📱</span></p>
-<p class="p57"><span class="s3">PHONE</span></p>
-<p class="p58"><span class="s3">0497 801 138</span></p>
-<p class="p56"><span class="s24">📍</span></p>
-<p class="p57"><span class="s3">LOCATION</span></p>
-<p class="p58"><span class="s3">Sunshine Coast, QLD, Australia</span></p>
-<p class="p56"><span class="s24">🔗</span></p>
-<p class="p57"><span class="s3">LINKEDIN</span></p>
-<p class="p59"><span class="s3"><a href="https://linkedin.com/in/sarina-katuwal-913626147">linkedin.com/in/sarina-katuwal-913626147<span class="s25"></span></a></span></p>
-<p class="p57"><span class="s3">REFEREES</span></p>
-<p class="p60"><span class="s26">John Doig</span></p>
-<p class="p61"><span class="s26">Chief Technology Officer — Actualisation</span></p>
-<p class="p62"><span class="s26">john@actualisation.ai</span></p>
-<p class="p60"><span class="s26">Rojina Maharjan</span></p>
-<p class="p61"><span class="s26">Senior Software Engineer</span></p>
-<p class="p62"><span class="s26">rogna14@gmail.com</span></p>
-<p class="p61"><span class="s16">CURRENTLY SEEKING</span></p>
-<p class="p63"><span class="s16">Graduate cybersecurity roles from late 2026</span></p>
-<p class="p64"><span class="s16">Particularly interested in GRC analyst, security analyst, or risk advisory positions in the Australian market. Open to full-time graduate programs or entry-level roles in government, finance, or technology sectors.</span></p>
-<p class="p61"><span class="s27">STRENGTHS</span></p>
-<p class="p65"><span class="s27">✓ 5+ years fintech industry experience</span></p>
-<p class="p65"><span class="s27">✓ Hands-on Essential 8 &amp; OpenFAIR experience</span></p>
-<p class="p65"><span class="s27">✓ CISO-level reporting and executive communication</span></p>
-<p class="p65"><span class="s27">✓ ISTQB certified, Azure certified</span></p>
-<p class="p65"><span class="s27">✓ Strong documentation and compliance mindset</span></p>
-<p class="p66"><span class="s4">© 2026 Sarina Katuwal · Cybersecurity &amp; QA Portfolio · Built for Netlify deployment</span></p>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">SK <span>/</span> Portfolio</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#reflection">Reflection</a></li>
+    <li><a href="#certs">Certs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-tag">Sunshine Coast, QLD · Student Visa (SC-500)</div>
+    <h1 class="hero-name">Sarina<br><em>Katuwal</em></h1>
+    <p class="hero-sub">Cybersecurity Analyst (GRC) &amp; Quality Assurance Engineer transitioning into a cybersecurity career with 5+ years of fintech QA experience and hands-on GRC internship exposure.</p>
+    <div class="hero-pills">
+      <span class="pill pill-teal">Essential 8 · ACSC</span>
+      <span class="pill pill-teal">OpenFAIR Risk</span>
+      <span class="pill pill-teal">ISO 27001 · NIST · SOC 2</span>
+      <span class="pill pill-white">OWASP Top 10</span>
+      <span class="pill pill-white">Burp Suite · VAPT</span>
+      <span class="pill pill-white">Agile / Scrum</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#experience">View Experience</a>
+      <a class="btn btn-outline" href="#contact">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    scroll
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid fade-in">
+      <div>
+        <div class="about-card">
+          <div class="about-avatar">SK</div>
+          <div class="about-name">Sarina Katuwal</div>
+          <div class="about-role">Cybersecurity &amp; QA Professional</div>
+          <div class="about-detail"><strong>Location</strong> Sunshine Coast, QLD</div>
+          <div class="about-detail"><strong>Study</strong> M.ICT — Univ. of Sunshine Coast</div>
+          <div class="about-detail"><strong>Visa</strong> Student Subclass 500</div>
+          <div class="about-detail"><strong>Available</strong> Graduate roles from late 2026</div>
+          <div class="about-detail"><strong>Email</strong> skatwalg96@gmail.com</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">Where <em>security</em> meets quality</h2>
+        <p>I started my career as a QA engineer at F1Soft International — one of Nepal's largest fintech companies — where I spent five years building expertise in testing complex financial systems. Over time, my work in API security testing, vulnerability assessment, and compliance documentation drew me deeper into cybersecurity.</p>
+        <p>In 2024 I moved to Australia to pursue a <strong>Master of ICT at the University of the Sunshine Coast</strong>, focusing on cybersecurity. In 2026 I completed an internship at Actualisation as a <strong>GRC analyst</strong>, conducting an Essential 8 gap analysis and applying the OpenFAIR risk framework to deliver executive-level cyber risk reports to the CISO.</p>
+        <p>I am now seeking graduate or entry-level cybersecurity roles — particularly in <strong>GRC, security testing, or risk analysis</strong> — where I can apply my combined technical and compliance background.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label">Professional Experience</div>
+    <h2 class="section-title">Where I've <em>worked</em></h2>
+    <p class="section-intro">Five years in fintech QA, now building a cybersecurity career through formal study and hands-on GRC internship experience.</p>
+    <div class="exp-timeline">
+
+      <!-- Actualisation -->
+      <div class="exp-item fade-in">
+        <div class="exp-dot">🔐</div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-title">Cybersecurity Analyst Intern — GRC</div>
+            <div class="exp-dates">Mar 2026 – May 2026</div>
+          </div>
+          <div class="exp-org">Actualisation · Sunshine Coast, QLD</div>
+          <div class="exp-subhead">GRC & Risk Management</div>
+          <ul class="exp-list">
+            <li><strong>Delivered full Essential 8 gap analysis</strong> against ACSC Maturity Level 2 — mapping deficiencies across all 8 mitigation strategies and producing a prioritised remediation roadmap for the CISO.</li>
+            <li><strong>Applied OpenFAIR risk quantification</strong> to model top cyber risk scenarios, estimating loss event frequency (LEF) and probable loss magnitude (PLM) for executive-level risk discussions.</li>
+            <li><strong>Cross-mapped four GRC frameworks</strong> (ISO 27001, NIST CSF, SOC 2, Essential 8) to the organisation's current posture, supporting strategic security investment decisions.</li>
+            <li>Contributed to risk register maintenance and CISO-level risk reporting.</li>
+          </ul>
+          <div class="exp-subhead">Security Testing</div>
+          <ul class="exp-list">
+            <li>Conducted web application security testing against OWASP Top 10 vulnerabilities with documented findings and remediation guidance.</li>
+            <li>Authored VAPT documentation and test evidence for compliance and audit-readiness.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- F1Soft Senior -->
+      <div class="exp-item fade-in">
+        <div class="exp-dot">🧪</div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-title">QA Engineer → Senior QA Engineer</div>
+            <div class="exp-dates">Apr 2019 – Jul 2024</div>
+          </div>
+          <div class="exp-org">F1Soft International Pvt. Ltd. (FinTech) · Nepal</div>
+          <div class="exp-subhead">Security Contributions</div>
+          <ul class="exp-list">
+            <li><strong>Reduced vulnerability exposure</strong> across financial APIs through structured Burp Suite and Postman security testing, identifying and escalating critical data-handling vulnerabilities.</li>
+            <li><strong>Strengthened audit readiness</strong> by authoring VAPT reports and compliance-aligned documentation across multiple production systems.</li>
+            <li>Performed SQL backend validation for access controls and data integrity across multi-tenant banking environments.</li>
+          </ul>
+          <div class="exp-subhead">QA Engineering</div>
+          <ul class="exp-list">
+            <li><strong>Promoted to Senior QA Engineer within 3 years</strong> based on delivery quality, technical leadership, and team capability uplift.</li>
+            <li>Led end-to-end testing of two major financial platforms serving thousands of customers — functional, regression, integration, smoke, UAT and exploratory phases.</li>
+            <li>Mentored junior QA engineers; contributed to hiring and onboarding of 5+ team members.</li>
+            <li>Maintained requirements traceability matrices; contributed to sprint planning and release cycles in Agile/Scrum teams.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label">Key Projects</div>
+    <h2 class="section-title">Work that <em>demonstrates</em> my skills</h2>
+    <p class="section-intro">Real deliverables from my internship and QA career. Replace placeholders with your screenshots when ready.</p>
+    <div class="projects-grid">
+
+      <div class="proj-card fade-in">
+        <div class="proj-img">
+          <div class="proj-img-placeholder">
+            <div class="proj-img-icon">📊</div>
+            <div class="proj-img-label">Add screenshot here</div>
+          </div>
+          <div class="proj-add-btn"><div class="proj-add-inner">+ Add Screenshot</div></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tag">GRC · Actualisation Internship</div>
+          <div class="proj-name">Essential 8 Gap Analysis — Maturity Level 2</div>
+          <div class="proj-desc">Benchmarked Actualisation's security controls against all 8 ACSC mitigation strategies. Identified 12+ control gaps and produced a scored gap report and remediation roadmap for the CISO.</div>
+          <div class="proj-pills">
+            <span class="proj-pill">Essential 8</span>
+            <span class="proj-pill">ACSC</span>
+            <span class="proj-pill">Gap Analysis</span>
+            <span class="proj-pill">Risk Reporting</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card fade-in">
+        <div class="proj-img">
+          <div class="proj-img-placeholder">
+            <div class="proj-img-icon">⚖️</div>
+            <div class="proj-img-label">Add screenshot here</div>
+          </div>
+          <div class="proj-add-btn"><div class="proj-add-inner">+ Add Screenshot</div></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tag">Risk Quantification · Actualisation Internship</div>
+          <div class="proj-name">OpenFAIR Risk Scenario Modelling</div>
+          <div class="proj-desc">Developed 3 OpenFAIR risk scenarios estimating loss event frequency and probable loss magnitude for the organisation's top cyber threats. Findings directly informed board-level risk appetite discussions.</div>
+          <div class="proj-pills">
+            <span class="proj-pill">OpenFAIR</span>
+            <span class="proj-pill">ISO 27001</span>
+            <span class="proj-pill">NIST CSF</span>
+            <span class="proj-pill">CISO Reporting</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card fade-in">
+        <div class="proj-img">
+          <div class="proj-img-placeholder">
+            <div class="proj-img-icon">📱</div>
+            <div class="proj-img-label">Add screenshot here</div>
+          </div>
+          <div class="proj-add-btn"><div class="proj-add-inner">+ Add Screenshot</div></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tag">Security & QA · F1Soft</div>
+          <div class="proj-name">Mobile Banking App — Security & Functional Testing</div>
+          <div class="proj-desc">Led end-to-end testing of a mobile banking platform covering MFA flows, monetary transfers, API validation and SQL data integrity — serving thousands of customers across Nepal.</div>
+          <div class="proj-pills">
+            <span class="proj-pill">OWASP Top 10</span>
+            <span class="proj-pill">Burp Suite</span>
+            <span class="proj-pill">Postman</span>
+            <span class="proj-pill">SQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card fade-in">
+        <div class="proj-img">
+          <div class="proj-img-placeholder">
+            <div class="proj-img-icon">🎁</div>
+            <div class="proj-img-label">Add screenshot here</div>
+          </div>
+          <div class="proj-add-btn"><div class="proj-add-inner">+ Add Screenshot</div></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tag">QA · F1Soft</div>
+          <div class="proj-name">Loyalty Rewards & Points Management Platform</div>
+          <div class="proj-desc">Tested points accrual, redemption and rewards catalogue workflows. Conducted integration testing between payment systems and rewards modules, supporting UAT for real-world customer scenarios.</div>
+          <div class="proj-pills">
+            <span class="proj-pill">Integration Testing</span>
+            <span class="proj-pill">UAT</span>
+            <span class="proj-pill">Regression</span>
+            <span class="proj-pill">Jira / Xray</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="upload-note">💡 Replace placeholder images with your own screenshots, test reports, or evidence documents from each project</div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-label">Technical Skills</div>
+    <h2 class="section-title">What I <em>bring</em></h2>
+    <p class="section-intro">A rare combination of security testing, GRC compliance experience, and deep QA engineering expertise.</p>
+    <div class="skills-grid">
+      <div class="skill-card fade-in">
+        <div class="skill-card-icon">🛡️</div>
+        <div class="skill-card-title">Cybersecurity & GRC</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Essential 8 (ACSC)</span>
+          <span class="skill-tag highlight">OpenFAIR</span>
+          <span class="skill-tag highlight">ISO 27001</span>
+          <span class="skill-tag highlight">NIST CSF</span>
+          <span class="skill-tag highlight">SOC 2</span>
+          <span class="skill-tag">VAPT</span>
+          <span class="skill-tag">Risk Register</span>
+          <span class="skill-tag">OWASP Top 10</span>
+        </div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-card-icon">🔍</div>
+        <div class="skill-card-title">Security Testing</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Burp Suite</span>
+          <span class="skill-tag highlight">Postman</span>
+          <span class="skill-tag">API Security Testing</span>
+          <span class="skill-tag">Web App Security</span>
+          <span class="skill-tag">Vulnerability Assessment</span>
+          <span class="skill-tag">Penetration Testing</span>
+        </div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-card-icon">✅</div>
+        <div class="skill-card-title">QA & Testing</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Functional Testing</span>
+          <span class="skill-tag">Regression Testing</span>
+          <span class="skill-tag">Integration Testing</span>
+          <span class="skill-tag">UAT</span>
+          <span class="skill-tag">Exploratory Testing</span>
+          <span class="skill-tag highlight">JMeter</span>
+          <span class="skill-tag">Smoke Testing</span>
+        </div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-card-icon">🧰</div>
+        <div class="skill-card-title">Tools & Platforms</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Jira & Xray</span>
+          <span class="skill-tag">Confluence</span>
+          <span class="skill-tag">Katalon Studio</span>
+          <span class="skill-tag">Selenium WebDriver</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">SQL</span>
+        </div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-card-icon">⚙️</div>
+        <div class="skill-card-title">Methodologies</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Agile / Scrum</span>
+          <span class="skill-tag">SDLC / STLC</span>
+          <span class="skill-tag">Risk-Based Testing</span>
+          <span class="skill-tag">Compliance Testing</span>
+          <span class="skill-tag">Sprint Planning</span>
+          <span class="skill-tag">Traceability Matrices</span>
+        </div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-card-icon">📝</div>
+        <div class="skill-card-title">Documentation</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Test Plans</span>
+          <span class="skill-tag">VAPT Reports</span>
+          <span class="skill-tag">Risk Registers</span>
+          <span class="skill-tag">Gap Analysis Reports</span>
+          <span class="skill-tag">Audit Documentation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFLECTION -->
+<section id="reflection">
+  <div class="container">
+    <div class="section-label">Reflection on Learning</div>
+    <h2 class="section-title">How I've <em>grown</em></h2>
+    <p class="section-intro">Reflecting on my career journey through the lens of career development theory — from fintech QA to cybersecurity GRC professional.</p>
+    <div class="reflection-grid">
+      <div class="reflect-card fade-in">
+        <div class="reflect-num">01</div>
+        <div class="reflect-title">From QA to Security — Recognising the Connection</div>
+        <div class="reflect-body">My five years in QA at F1Soft taught me to think adversarially — to find what breaks before users do. When I began security testing using Burp Suite and writing VAPT reports, I realised I was already thinking like a security tester. This recognition aligned with <strong>Holland's theory</strong> of career fit: my investigative and detail-oriented nature was naturally suited to cybersecurity, not just QA.</div>
+      </div>
+      <div class="reflect-card fade-in">
+        <div class="reflect-num">02</div>
+        <div class="reflect-title">Learning GRC — Bridging Technical and Business</div>
+        <div class="reflect-body">The Actualisation internship was a turning point. Applying OpenFAIR to model cyber risk and presenting to the CISO forced me to translate technical findings into business language. This reflects <strong>Super's career development theory</strong> — I moved from the exploration stage into the establishment stage, building real-world GRC competency and professional identity as a cybersecurity analyst.</div>
+      </div>
+      <div class="reflect-card fade-in">
+        <div class="reflect-num">03</div>
+        <div class="reflect-title">What Surprised Me Most</div>
+        <div class="reflect-body">I expected GRC to be mostly documentation. What surprised me was how analytical it is — quantifying risk with OpenFAIR, scoring Essential 8 maturity gaps, mapping frameworks against real controls. This experience challenged me intellectually and confirmed that <strong>GRC is where I want to build my career</strong>: at the intersection of technical security and strategic decision-making.</div>
+      </div>
+      <div class="reflect-card fade-in">
+        <div class="reflect-num">04</div>
+        <div class="reflect-title">Where I'm Heading</div>
+        <div class="reflect-body">My short-term goal is to complete my Master of ICT and secure a graduate GRC or security analyst role in Australia. Medium-term, I plan to pursue a CISSP or CISA certification and grow into a senior security risk advisory role. My career goal aligns with <strong>Krumboltz's planned happenstance theory</strong> — being open to opportunities (like this internship) while actively building skills that make me ready when they arrive.</div>
+      </div>
+    </div>
+    <div class="career-theory-box fade-in">
+      <h3>Career Development Theory — Applied to My Journey</h3>
+      <p>My career transition from QA engineering to cybersecurity reflects key principles from established career development frameworks. <strong>Super's Life-Span Theory</strong> frames my current position as the late exploration / early establishment stage — I have identified my direction (cybersecurity GRC), am gaining real-world experience through my internship, and am building the professional identity needed to transition fully into the field.</p>
+      <p><strong>Krumboltz's Social Learning Theory</strong> explains how I got here: unplanned learning experiences in security testing during my QA role sparked curiosity, which led me to pursue formal cybersecurity study and seek out a GRC internship. Each step was partly planned, partly opportunistic — which is exactly how Krumboltz describes effective career development.</p>
+      <p>Going forward, I intend to apply <strong>Bandura's self-efficacy</strong> principles: building confidence through progressive mastery — first the internship, then graduate roles, then certifications (CISA/CISSP) — rather than waiting until I feel "ready."</p>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certs">
+  <div class="container">
+    <div class="section-label">Certifications</div>
+    <h2 class="section-title">Credentials &amp; <em>qualifications</em></h2>
+    <p class="section-intro">Industry-recognised certifications supporting my transition into cybersecurity.</p>
+    <div class="certs-grid">
+      <div class="cert-card fade-in">
+        <div class="cert-icon teal">🧪</div>
+        <div>
+          <div class="cert-name">ISTQB Certified Tester — Foundation Level</div>
+          <div class="cert-body">International Software Testing Qualifications Board</div>
+        </div>
+      </div>
+      <div class="cert-card fade-in">
+        <div class="cert-icon blue">☁️</div>
+        <div>
+          <div class="cert-name">Microsoft Certified: Azure Data Fundamentals (DP-900)</div>
+          <div class="cert-body">Microsoft</div>
+        </div>
+      </div>
+      <div class="cert-card fade-in">
+        <div class="cert-icon blue">🤖</div>
+        <div>
+          <div class="cert-name">Microsoft Certified: Azure AI Fundamentals (AI-900)</div>
+          <div class="cert-body">Microsoft</div>
+        </div>
+      </div>
+      <div class="cert-card fade-in">
+        <div class="cert-icon amber">🐍</div>
+        <div>
+          <div class="cert-name">IT Specialist — Python</div>
+          <div class="cert-body">Certiport / Pearson VUE</div>
+        </div>
+      </div>
+      <div class="cert-card fade-in">
+        <div class="cert-icon teal">🔒</div>
+        <div>
+          <div class="cert-name">CyberSmart: Information Security Training</div>
+          <div class="cert-body">Cybersecurity Awareness Program</div>
+        </div>
+      </div>
+      <div class="cert-card fade-in">
+        <div class="cert-icon blue">📄</div>
+        <div>
+          <div class="cert-name">Microsoft Office Specialist: Word 2013</div>
+          <div class="cert-body">Microsoft</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <div class="section-label">Education</div>
+    <h2 class="section-title">Academic <em>foundations</em></h2>
+    <div class="edu-grid">
+      <div class="edu-card fade-in">
+        <div class="edu-degree">Master of Information and Communications Technology (ICT)</div>
+        <div class="edu-uni">University of the Sunshine Coast</div>
+        <div class="edu-dates">Jul 2024 – Present (Ongoing) · Sunshine Coast, QLD</div>
+        <div class="edu-courses">
+          <strong>Relevant Coursework</strong>
+          Cybersecurity Fundamentals · Managing Data &amp; Databases · Programming Foundations · Machine Learning · Project Management
+          <br/><br/>
+          <strong>Capstone</strong>
+          Industry Dissertation I &amp; II (in progress)
+        </div>
+      </div>
+      <div class="edu-card fade-in">
+        <div class="edu-degree">Bachelor of Information Management (BIM)</div>
+        <div class="edu-uni">Prime College, Tribhuvan University</div>
+        <div class="edu-dates">2014 – 2018 · Kathmandu, Nepal · CGPA: 3.62 / 4.0</div>
+        <div class="edu-courses">
+          <strong>Key Subjects</strong>
+          Computer Information Systems · Software Engineering · Computer Security &amp; Cyber Law · Web Technology · Artificial Intelligence · Data Structures &amp; Algorithms · Digital Logic
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Let's <em>connect</em></h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-item-icon">📧</div>
+          <div>
+            <div class="contact-item-label">Email</div>
+            <div class="contact-item-val">skatwalg96@gmail.com</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📱</div>
+          <div>
+            <div class="contact-item-label">Phone</div>
+            <div class="contact-item-val">0497 801 138</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div>
+            <div class="contact-item-label">Location</div>
+            <div class="contact-item-val">Sunshine Coast, QLD, Australia</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">🔗</div>
+          <div>
+            <div class="contact-item-label">LinkedIn</div>
+            <div class="contact-item-val"><a href="https://linkedin.com/in/sarina-katuwal-913626147" target="_blank">linkedin.com/in/sarina-katuwal-913626147</a></div>
+          </div>
+        </div>
+        <div style="margin-top:1.5rem;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:0.4rem;">Referees</div>
+        </div>
+        <div class="ref-cards">
+          <div class="ref-card">
+            <div class="ref-name">John Doig</div>
+            <div class="ref-role">Chief Technology Officer — Actualisation</div>
+            <div class="ref-email">john@actualisation.ai</div>
+          </div>
+          <div class="ref-card">
+            <div class="ref-name">Rojina Maharjan</div>
+            <div class="ref-role">Senior Software Engineer</div>
+            <div class="ref-email">rogna14@gmail.com</div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:2rem;">
+          <div style="color:var(--teal-light);font-size:0.8rem;font-weight:600;margin-bottom:0.8rem;letter-spacing:0.05em;">CURRENTLY SEEKING</div>
+          <div style="color:#fff;font-family:'DM Serif Display',serif;font-size:1.2rem;margin-bottom:1rem;line-height:1.3;">Graduate cybersecurity roles from late 2026</div>
+          <div style="color:rgba(255,255,255,0.6);font-size:0.85rem;line-height:1.65;">Particularly interested in GRC analyst, security analyst, or risk advisory positions in the Australian market. Open to full-time graduate programs or entry-level roles in government, finance, or technology sectors.</div>
+        </div>
+        <div style="background:rgba(10,124,140,0.15);border:1px solid rgba(10,124,140,0.3);border-radius:14px;padding:2rem;">
+          <div style="color:var(--teal-light);font-size:0.8rem;font-weight:600;margin-bottom:0.8rem;letter-spacing:0.05em;">STRENGTHS</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="color:rgba(255,255,255,0.8);font-size:0.85rem;">✓ 5+ years fintech industry experience</div>
+            <div style="color:rgba(255,255,255,0.8);font-size:0.85rem;">✓ Hands-on Essential 8 &amp; OpenFAIR experience</div>
+            <div style="color:rgba(255,255,255,0.8);font-size:0.85rem;">✓ CISO-level reporting and executive communication</div>
+            <div style="color:rgba(255,255,255,0.8);font-size:0.85rem;">✓ ISTQB certified, Azure certified</div>
+            <div style="color:rgba(255,255,255,0.8);font-size:0.85rem;">✓ Strong documentation and compliance mindset</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Sarina Katuwal · Cybersecurity &amp; QA Portfolio · Built for Netlify deployment
+</footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
 </body>
 </html>
